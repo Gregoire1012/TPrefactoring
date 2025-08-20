@@ -1,0 +1,9 @@
+Si on déplace toString() dans les sous-classes (Homme et Femme) au lieu de la laisser dans la classe parente Humain:
+
+Chaque sous-classe (Homme, Femme) devra redéfinir sa propre méthode toString().
+
+On duplique le même code dans Homme et Femme, alors qu’il était centralisé dans Humain.
+
+Avantage : on peut personnaliser l’affichage (par ex. Homme: Nom=..., Femme: Nom=...).
+
+Inconvénient : moins de factorisation : si on change le format d’affichage, il faudra modifier toutes les sous-classes.
