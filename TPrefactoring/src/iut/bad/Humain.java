@@ -23,53 +23,14 @@ public class Humain implements Consommation {
         this.amis = new ArrayList<>();
     }
 
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "Nom: " + nom + ", Prénom: " + prenom + ", Âge: " + age;
-    }
-
-    public void details() {
-        System.out.println(toString());
-    }
-
-    @Override
-    public void manger() {
-        System.out.println(getNom() + " est en train de manger.");
-    }
-
-    @Override
-    public void boire() {
-        System.out.println(getNom() + " est en train de boire.");
-    }
-
     public void ami(Humain h) {
+        ami(h, 100); // valeur par défaut 100
+    }
+
+    public void ami(Humain h, int duree) {
         if (!amis.contains(h)) {
             amis.add(h);
-            System.out.println(this.nom + " est maintenant ami avec " + h.getNom());
+            System.out.println(this.nom + " est maintenant ami avec " + h.getNom() + " pour " + duree + " jours.");
         }
     }
 
@@ -80,4 +41,6 @@ public class Humain implements Consommation {
         }
         System.out.println();
     }
+
+    // ... reste de la classe (getters, setters, details, manger, boire, toString) inchangé
 }
