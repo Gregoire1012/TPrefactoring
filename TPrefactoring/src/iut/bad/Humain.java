@@ -49,4 +49,12 @@ public class Humain {
     public void details() {
         System.out.println(toString());
     }
+
+    public void manger() {
+        System.out.println(getNom() + " est en train de manger.");
+    }
+
+    public void boire() {
+        System.out.println(getNom() + " est en train de boire.");
+    }
 }
